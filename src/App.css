@@ -43,6 +43,14 @@
 
 }
 
+.PDFContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 10px;
+  justify-content: center;
+  gap: 10px;
+}
+
 .Text {
 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

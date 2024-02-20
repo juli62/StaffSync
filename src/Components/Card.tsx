@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import DownloadIcon from '@mui/icons-material/Download';
 
 
 export default function MultiActionAreaCard() {
@@ -29,7 +30,7 @@ export default function MultiActionAreaCard() {
             </CardActionArea>
             <CardActions>
                 <Button size="small" color="primary" variant='outlined'>
-                    Download
+                    <DownloadIcon />
                 </Button>
             </CardActions>
 

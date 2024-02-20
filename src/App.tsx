@@ -25,8 +25,15 @@ function App() {
             <LogIn />
 
           </div>
-          <MultiActionAreaCard />
-
+          <div className='PDFContent'>
+            <MultiActionAreaCard />
+            <MultiActionAreaCard />
+            <MultiActionAreaCard />
+            <MultiActionAreaCard />
+            <MultiActionAreaCard />
+            <MultiActionAreaCard />
+            <MultiActionAreaCard />
+          </div>
 
 
           <Title />
