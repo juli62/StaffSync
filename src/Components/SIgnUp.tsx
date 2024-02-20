@@ -5,7 +5,7 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
 
-export default function LogIn() {
+export default function SignUp() {
     return (
         <Box
             component="form"
@@ -17,8 +17,8 @@ export default function LogIn() {
         >
             <TextField id="outlined-basic" label="Email" variant="outlined" />
             <TextField id="outlined-basic" label="Password" variant="outlined" />
-            <Button variant="contained">Log In</Button>
-
+            <TextField id="outlined-basic" label="Repeat Password" variant="outlined" />
+            <Button variant="contained">Sign Up</Button>
         </Box>
     );
 }

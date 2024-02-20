@@ -34,7 +34,7 @@
   flex: content;
   flex-wrap: wrap;
   justify-content: center;
-  border: 10px;
+  border: 6px;
   border-style: solid;
   border-radius: 15px;
   border-color: rgb(35, 35, 35);
@@ -42,7 +42,12 @@
   margin-top: 100px;
   background-color: aliceblue;
   backdrop-filter: blur(10px);
-  background-image: url("cardboard-texture-background.jpg");
+
+}
+
+.Text {
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 @keyframes App-logo-spin {

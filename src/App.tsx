@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Title, Navbar, LogIn } from './Components/Index'
+import { Title, Navbar, LogIn, SignUp } from './Components/Index'
 function App() {
   return (
     <div className="App">
@@ -9,9 +9,11 @@ function App() {
         <Navbar />
 
         <div className="CenterDiv">
+          <p className='Text'>Log In</p>
           <LogIn />
 
         </div>
+
 
 
 
