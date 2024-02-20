@@ -1,25 +1,38 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Title, Navbar, LogIn, SignUp } from './Components/Index'
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { Title, Navbar, LogIn, SignUp, Card } from './Components/Index'
+import MultiActionAreaCard from './Components/Card';
+
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Navbar />
+    <ThemeProvider theme={darkTheme}>
+      <div className="App">
+        <header className="App-header">
+          <Navbar />
 
-        <div className="CenterDiv">
-          <p className='Text'>Log In</p>
-          <LogIn />
+          <div className="CenterDiv">
+            <p className='Text'>Log In</p>
+            <LogIn />
 
-        </div>
+          </div>
+          <MultiActionAreaCard />
 
 
 
-
-        <Title />
-      </header>
-    </div>
+          <Title />
+        </header>
+      </div>
+    </ThemeProvider>
   );
 }
 

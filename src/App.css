@@ -34,19 +34,17 @@
   flex: content;
   flex-wrap: wrap;
   justify-content: center;
-  border: 6px;
-  border-style: solid;
   border-radius: 15px;
-  border-color: rgb(35, 35, 35);
+  border-color: #181818;
   width: 350px;
   margin-top: 100px;
-  background-color: aliceblue;
-  backdrop-filter: blur(10px);
+  background-color: #191919;
+
 
 }
 
 .Text {
-  color: black;
+
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
