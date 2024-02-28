@@ -6,6 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { Title, Navbar, LogIn, SignUp, Card, Accept } from './Components/Index'
 import AlertDialogSlide from './Components/PopUp';
 import MultiActionAreaCard from './Components/Card';
+import SimpleBackdrop from './Components/PopUp';
 
 
 
@@ -27,6 +28,7 @@ function App() {
             <LogIn />
 
           </div>
+          <SimpleBackdrop />
           <div className='PDFContent'>
             <MultiActionAreaCard />
             <MultiActionAreaCard />
@@ -36,8 +38,8 @@ function App() {
             <MultiActionAreaCard />
             <MultiActionAreaCard />
           </div>
-          <AlertDialogSlide />
-          <Accept />
+
+
 
 
 

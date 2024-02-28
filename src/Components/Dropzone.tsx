@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import { useDropzone } from 'react-dropzone';
+import PictureAsPdfOutlinedIcon from '@mui/icons-material/PictureAsPdfOutlined';
 
 function Accept(props: any) {
     const {
@@ -41,9 +42,12 @@ function Accept(props: any) {
                     <Typography gutterBottom component="div">
                         Drop files here, or click to select files
                     </Typography>
+
                     <Typography variant="body2" color="text.secondary">
                         (Only pdf files will be accepted)
+
                     </Typography>
+                    <PictureAsPdfOutlinedIcon />
 
                 </div>
 

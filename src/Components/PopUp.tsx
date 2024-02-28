@@ -1,54 +1,29 @@
 import * as React from 'react';
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
 import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-import Slide from '@mui/material/Slide';
-import { TransitionProps } from '@mui/material/transitions';
 import Accept from './Dropzone';
+import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
 
-const Transition = React.forwardRef(function Transition(
-    props: TransitionProps & {
-        children: React.ReactElement<any, any>;
-    },
-    ref: React.Ref<unknown>,
-) {
-    return <Slide direction="up" ref={ref} {...props} />;
-});
-
-export default function AlertDialogSlide() {
+export default function SimpleBackdrop() {
     const [open, setOpen] = React.useState(false);
-
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-
     const handleClose = () => {
         setOpen(false);
     };
+    const handleOpen = () => {
+        setOpen(true);
+    };
 
     return (
-        <React.Fragment>
-            <Button variant="outlined" onClick={handleClickOpen}>
-                Upload
-            </Button>
-            <Dialog
+        <div>
+            <Button size="small" color="primary" variant='outlined' onClick={handleOpen}><FileUploadOutlinedIcon /> </Button>
+            <Backdrop
+                sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
                 open={open}
-                TransitionComponent={Transition}
-                keepMounted
-                onClose={handleClose}
-                aria-describedby="alert-dialog-slide-description"
+                onClick={handleClose}
             >
-                <DialogTitle>{"Upload"}</DialogTitle>
-                <DialogContent>
-                    <Accept />
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleClose}>Close</Button>
-                </DialogActions>
-            </Dialog>
-        </React.Fragment>
+                <Accept />
+            </Backdrop>
+        </div>
     );
 }
