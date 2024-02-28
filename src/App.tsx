@@ -3,8 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { Title, Navbar, LogIn, SignUp, Card } from './Components/Index'
+import { Title, Navbar, LogIn, SignUp, Card, Accept } from './Components/Index'
+import AlertDialogSlide from './Components/PopUp';
 import MultiActionAreaCard from './Components/Card';
+
 
 
 const darkTheme = createTheme({
@@ -34,6 +36,10 @@ function App() {
             <MultiActionAreaCard />
             <MultiActionAreaCard />
           </div>
+          <AlertDialogSlide />
+          <Accept />
+
+
 
 
           <Title />
