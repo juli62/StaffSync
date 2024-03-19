@@ -7,8 +7,11 @@ import { Title, Navbar, LogIn, SignUp, Card, Accept } from './Components/Index'
 import AlertDialogSlide from './Components/PopUp';
 import MultiActionAreaCard from './Components/Card';
 import SimpleBackdrop from './Components/PopUp';
-
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import Library from './AppLibrary';
+import SingIn from './LogIn';
+import Register from './Register';
 
 const darkTheme = createTheme({
   palette: {
@@ -17,37 +20,23 @@ const darkTheme = createTheme({
 });
 
 function App() {
+
   return (
     <ThemeProvider theme={darkTheme}>
       <div className="App">
-        <header className="App-header">
-          <Navbar />
+        <Navbar />
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/library" element={<Library />} />
+            <Route path="/login" element={<SingIn />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </BrowserRouter>
 
-          <div className="CenterDiv">
-            <p className='Text'>Log In</p>
-            <LogIn />
-
-          </div>
-          <SimpleBackdrop />
-          <div className='PDFContent'>
-            <MultiActionAreaCard />
-            <MultiActionAreaCard />
-            <MultiActionAreaCard />
-            <MultiActionAreaCard />
-            <MultiActionAreaCard />
-            <MultiActionAreaCard />
-            <MultiActionAreaCard />
-          </div>
-
-
-
-
-
-
-          <Title />
-        </header>
       </div>
-    </ThemeProvider>
+    </ThemeProvider >
   );
 }
 

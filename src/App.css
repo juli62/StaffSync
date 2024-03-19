@@ -43,17 +43,8 @@
 
 }
 
-.DropzoneDiv {
-  display: flex;
-  justify-content: center;
-  border-radius: 8px;
-  border: 1px solid rgb(255, 255, 255);
-  width: 435px;
-  height: 250px;
-
-  background-color: #191919;
-
-
+#signUp {
+  margin-bottom: 300px;
 }
 
 #DropZone {
